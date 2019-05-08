@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1098AC4FF4B7745243BF70032ED02D24 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C5C76FBA608905EACFE3700A9CF5EF /* RxCocoa.framework */; };
+		BCB1C0993C0837B2E9694B84DDD2657B /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652727006C059D7CC5BE4084D60436B7 /* RxRelay.framework */; };
+		D4B60FEA04312DC06FA9D586E29DD47B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A499816C85EE9A576CFCFAF0A1FC65F1 /* RxSwift.framework */; };
 		F3BB5E86228331BC00CBD621 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB5E85228331BC00CBD621 /* AppDelegate.swift */; };
-		F3BB5E88228331BC00CBD621 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB5E87228331BC00CBD621 /* ViewController.swift */; };
-		F3BB5E8B228331BC00CBD621 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3BB5E89228331BC00CBD621 /* Main.storyboard */; };
 		F3BB5E8D228331BC00CBD621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3BB5E8C228331BC00CBD621 /* Assets.xcassets */; };
 		F3BB5E90228331BC00CBD621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3BB5E8E228331BC00CBD621 /* LaunchScreen.storyboard */; };
 		F3BB5E9B228331BC00CBD621 /* WikiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB5E9A228331BC00CBD621 /* WikiaTests.swift */; };
+		F3BB5EAC2283340000CBD621 /* Wikias.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3BB5EAB2283340000CBD621 /* Wikias.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +28,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43C5C76FBA608905EACFE3700A9CF5EF /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = RxCocoa.framework; path = Dependencies/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		652727006C059D7CC5BE4084D60436B7 /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = RxRelay.framework; path = Dependencies/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		A499816C85EE9A576CFCFAF0A1FC65F1 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = RxSwift.framework; path = Dependencies/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		F3BB5E82228331BC00CBD621 /* Wikia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wikia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3BB5E85228331BC00CBD621 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F3BB5E87228331BC00CBD621 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F3BB5E8A228331BC00CBD621 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3BB5E8C228331BC00CBD621 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3BB5E8F228331BC00CBD621 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3BB5E91228331BC00CBD621 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3BB5E96228331BC00CBD621 /* WikiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WikiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3BB5E9A228331BC00CBD621 /* WikiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiaTests.swift; sourceTree = "<group>"; };
 		F3BB5E9C228331BC00CBD621 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3BB5EAB2283340000CBD621 /* Wikias.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wikias.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B60FEA04312DC06FA9D586E29DD47B /* RxSwift.framework in Frameworks */,
+				BCB1C0993C0837B2E9694B84DDD2657B /* RxRelay.framework in Frameworks */,
+				1098AC4FF4B7745243BF70032ED02D24 /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +63,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56D7E5F051DD7A603C970C8BBA27D559 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				88D007C64823CF611103EF89CEFDB841 /* Wikia */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		88D007C64823CF611103EF89CEFDB841 /* Wikia */ = {
+			isa = PBXGroup;
+			children = (
+				43C5C76FBA608905EACFE3700A9CF5EF /* RxCocoa.framework */,
+				652727006C059D7CC5BE4084D60436B7 /* RxRelay.framework */,
+				A499816C85EE9A576CFCFAF0A1FC65F1 /* RxSwift.framework */,
+			);
+			name = Wikia;
+			sourceTree = "<group>";
+		};
 		F3BB5E79228331BC00CBD621 = {
 			isa = PBXGroup;
 			children = (
 				F3BB5E84228331BC00CBD621 /* Wikia */,
 				F3BB5E99228331BC00CBD621 /* WikiaTests */,
 				F3BB5E83228331BC00CBD621 /* Products */,
+				56D7E5F051DD7A603C970C8BBA27D559 /* Dependencies */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +103,11 @@
 		F3BB5E84228331BC00CBD621 /* Wikia */ = {
 			isa = PBXGroup;
 			children = (
-				F3BB5E85228331BC00CBD621 /* AppDelegate.swift */,
-				F3BB5E87228331BC00CBD621 /* ViewController.swift */,
-				F3BB5E89228331BC00CBD621 /* Main.storyboard */,
-				F3BB5E8C228331BC00CBD621 /* Assets.xcassets */,
-				F3BB5E8E228331BC00CBD621 /* LaunchScreen.storyboard */,
-				F3BB5E91228331BC00CBD621 /* Info.plist */,
+				F3BB5EA62283331500CBD621 /* Common */,
+				F3BB5EA5228332E500CBD621 /* Config */,
+				F3BB5EA72283332800CBD621 /* Misc */,
+				F3BB5EA82283334D00CBD621 /* Resource */,
+				F3BB5EA92283336700CBD621 /* Scene */,
 			);
 			path = Wikia;
 			sourceTree = "<group>";
@@ -96,6 +121,54 @@
 			path = WikiaTests;
 			sourceTree = "<group>";
 		};
+		F3BB5EA5228332E500CBD621 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F3BB5E91228331BC00CBD621 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		F3BB5EA62283331500CBD621 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F3BB5EA72283332800CBD621 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				F3BB5E85228331BC00CBD621 /* AppDelegate.swift */,
+				F3BB5E8E228331BC00CBD621 /* LaunchScreen.storyboard */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		F3BB5EA82283334D00CBD621 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F3BB5E8C228331BC00CBD621 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F3BB5EA92283336700CBD621 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				F3BB5EAA2283338100CBD621 /* Wikias */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		F3BB5EAA2283338100CBD621 /* Wikias */ = {
+			isa = PBXGroup;
+			children = (
+				F3BB5EAB2283340000CBD621 /* Wikias.storyboard */,
+			);
+			path = Wikias;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +179,7 @@
 				F3BB5E7E228331BC00CBD621 /* Sources */,
 				F3BB5E7F228331BC00CBD621 /* Frameworks */,
 				F3BB5E80228331BC00CBD621 /* Resources */,
+				85E1B714240CC40559B12C087AE2DD80 /* Accio */,
 			);
 			buildRules = (
 			);
@@ -177,9 +251,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3BB5EAC2283340000CBD621 /* Wikias.storyboard in Resources */,
 				F3BB5E90228331BC00CBD621 /* LaunchScreen.storyboard in Resources */,
 				F3BB5E8D228331BC00CBD621 /* Assets.xcassets in Resources */,
-				F3BB5E8B228331BC00CBD621 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,12 +266,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		85E1B714240CC40559B12C087AE2DD80 /* Accio */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Dependencies/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Dependencies/iOS/RxRelay.framework",
+				"$(SRCROOT)/Dependencies/iOS/RxSwift.framework",
+			);
+			name = Accio;
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxRelay.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F3BB5E7E228331BC00CBD621 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3BB5E88228331BC00CBD621 /* ViewController.swift in Sources */,
 				F3BB5E86228331BC00CBD621 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,14 +317,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F3BB5E89228331BC00CBD621 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F3BB5E8A228331BC00CBD621 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F3BB5E8E228331BC00CBD621 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -360,17 +448,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WPZC96H3B4;
-				INFOPLIST_FILE = Wikia/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dependencies/iOS",
+				);
+				INFOPLIST_FILE = Wikia/Config/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyzkov.Wikia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -378,17 +472,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WPZC96H3B4;
-				INFOPLIST_FILE = Wikia/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dependencies/iOS",
+				);
+				INFOPLIST_FILE = Wikia/Config/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyzkov.Wikia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
