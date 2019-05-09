@@ -15,6 +15,9 @@
 		F3BB5E90228331BC00CBD621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3BB5E8E228331BC00CBD621 /* LaunchScreen.storyboard */; };
 		F3BB5E9B228331BC00CBD621 /* WikiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB5E9A228331BC00CBD621 /* WikiaTests.swift */; };
 		F3BB5EAC2283340000CBD621 /* Wikias.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3BB5EAB2283340000CBD621 /* Wikias.storyboard */; };
+		F3BB5EAF2283402800CBD621 /* WikiaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB5EAE2283402800CBD621 /* WikiaListViewController.swift */; };
+		F3BB5EB12283406D00CBD621 /* WikiaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB5EB02283406D00CBD621 /* WikiaViewCell.swift */; };
+		F3BB5EB4228476D500CBD621 /* CALayer+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB5EB3228476D500CBD621 /* CALayer+IB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		F3BB5E9A228331BC00CBD621 /* WikiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiaTests.swift; sourceTree = "<group>"; };
 		F3BB5E9C228331BC00CBD621 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3BB5EAB2283340000CBD621 /* Wikias.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wikias.storyboard; sourceTree = "<group>"; };
+		F3BB5EAE2283402800CBD621 /* WikiaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiaListViewController.swift; sourceTree = "<group>"; };
+		F3BB5EB02283406D00CBD621 /* WikiaViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiaViewCell.swift; sourceTree = "<group>"; };
+		F3BB5EB3228476D500CBD621 /* CALayer+IB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+IB.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,7 @@
 		F3BB5EA62283331500CBD621 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F3BB5EB22284769400CBD621 /* Extensions */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -164,9 +171,27 @@
 		F3BB5EAA2283338100CBD621 /* Wikias */ = {
 			isa = PBXGroup;
 			children = (
+				F3BB5EAD22833FD900CBD621 /* List */,
 				F3BB5EAB2283340000CBD621 /* Wikias.storyboard */,
 			);
 			path = Wikias;
+			sourceTree = "<group>";
+		};
+		F3BB5EAD22833FD900CBD621 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				F3BB5EAE2283402800CBD621 /* WikiaListViewController.swift */,
+				F3BB5EB02283406D00CBD621 /* WikiaViewCell.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		F3BB5EB22284769400CBD621 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F3BB5EB3228476D500CBD621 /* CALayer+IB.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +319,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3BB5EB12283406D00CBD621 /* WikiaViewCell.swift in Sources */,
+				F3BB5EAF2283402800CBD621 /* WikiaListViewController.swift in Sources */,
+				F3BB5EB4228476D500CBD621 /* CALayer+IB.swift in Sources */,
 				F3BB5E86228331BC00CBD621 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
