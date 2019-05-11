@@ -8,8 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1098AC4FF4B7745243BF70032ED02D24 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C5C76FBA608905EACFE3700A9CF5EF /* RxCocoa.framework */; };
+		2A085D2BCEB811308B7399D849C4AB47 /* RxFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EADCCB3CA5E97C2CC998B443F2AEDBB /* RxFeedback.framework */; };
+		47F5348965026A5C995C53E52AA00272 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36FAD1B1C81C4938E85FB943B9581F54 /* Action.framework */; };
 		BCB1C0993C0837B2E9694B84DDD2657B /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652727006C059D7CC5BE4084D60436B7 /* RxRelay.framework */; };
 		D4B60FEA04312DC06FA9D586E29DD47B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A499816C85EE9A576CFCFAF0A1FC65F1 /* RxSwift.framework */; };
+		F315B1B5228497FE00D445B2 /* Cyclones.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315B1B4228497FE00D445B2 /* Cyclones.swift */; };
+		F315B1B72284980800D445B2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315B1B62284980800D445B2 /* Event.swift */; };
+		F315B1B92284980F00D445B2 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315B1B82284980F00D445B2 /* State.swift */; };
+		F315B1BD2284989000D445B2 /* WikiasListCyclone.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315B1BC2284989000D445B2 /* WikiasListCyclone.swift */; };
+		F315B1BF22849C6300D445B2 /* WikiaOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315B1BE22849C6300D445B2 /* WikiaOverview.swift */; };
 		F3BB5E86228331BC00CBD621 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB5E85228331BC00CBD621 /* AppDelegate.swift */; };
 		F3BB5E8D228331BC00CBD621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3BB5E8C228331BC00CBD621 /* Assets.xcassets */; };
 		F3BB5E90228331BC00CBD621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3BB5E8E228331BC00CBD621 /* LaunchScreen.storyboard */; };
@@ -31,9 +38,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1EADCCB3CA5E97C2CC998B443F2AEDBB /* RxFeedback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = RxFeedback.framework; path = Dependencies/iOS/RxFeedback.framework; sourceTree = "<group>"; };
+		36FAD1B1C81C4938E85FB943B9581F54 /* Action.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Action.framework; path = Dependencies/iOS/Action.framework; sourceTree = "<group>"; };
 		43C5C76FBA608905EACFE3700A9CF5EF /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = RxCocoa.framework; path = Dependencies/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		652727006C059D7CC5BE4084D60436B7 /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = RxRelay.framework; path = Dependencies/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		A499816C85EE9A576CFCFAF0A1FC65F1 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = RxSwift.framework; path = Dependencies/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		F315B1B4228497FE00D445B2 /* Cyclones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cyclones.swift; sourceTree = "<group>"; };
+		F315B1B62284980800D445B2 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		F315B1B82284980F00D445B2 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		F315B1BC2284989000D445B2 /* WikiasListCyclone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiasListCyclone.swift; sourceTree = "<group>"; };
+		F315B1BE22849C6300D445B2 /* WikiaOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiaOverview.swift; sourceTree = "<group>"; };
 		F3BB5E82228331BC00CBD621 /* Wikia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wikia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3BB5E85228331BC00CBD621 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3BB5E8C228331BC00CBD621 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +70,8 @@
 				D4B60FEA04312DC06FA9D586E29DD47B /* RxSwift.framework in Frameworks */,
 				BCB1C0993C0837B2E9694B84DDD2657B /* RxRelay.framework in Frameworks */,
 				1098AC4FF4B7745243BF70032ED02D24 /* RxCocoa.framework in Frameworks */,
+				2A085D2BCEB811308B7399D849C4AB47 /* RxFeedback.framework in Frameworks */,
+				47F5348965026A5C995C53E52AA00272 /* Action.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,11 +96,40 @@
 		88D007C64823CF611103EF89CEFDB841 /* Wikia */ = {
 			isa = PBXGroup;
 			children = (
+				36FAD1B1C81C4938E85FB943B9581F54 /* Action.framework */,
 				43C5C76FBA608905EACFE3700A9CF5EF /* RxCocoa.framework */,
+				1EADCCB3CA5E97C2CC998B443F2AEDBB /* RxFeedback.framework */,
 				652727006C059D7CC5BE4084D60436B7 /* RxRelay.framework */,
 				A499816C85EE9A576CFCFAF0A1FC65F1 /* RxSwift.framework */,
 			);
 			name = Wikia;
+			sourceTree = "<group>";
+		};
+		F315B1B3228497DD00D445B2 /* Cyclones */ = {
+			isa = PBXGroup;
+			children = (
+				F315B1B4228497FE00D445B2 /* Cyclones.swift */,
+				F315B1B62284980800D445B2 /* Event.swift */,
+				F315B1B82284980F00D445B2 /* State.swift */,
+			);
+			path = Cyclones;
+			sourceTree = "<group>";
+		};
+		F315B1BA2284984100D445B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3BB5EAE2283402800CBD621 /* WikiaListViewController.swift */,
+				F3BB5EB02283406D00CBD621 /* WikiaViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F315B1BB2284985600D445B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F315B1BE22849C6300D445B2 /* WikiaOverview.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F3BB5E79228331BC00CBD621 = {
@@ -138,6 +183,7 @@
 		F3BB5EA62283331500CBD621 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F315B1B3228497DD00D445B2 /* Cyclones */,
 				F3BB5EB22284769400CBD621 /* Extensions */,
 			);
 			path = Common;
@@ -180,8 +226,9 @@
 		F3BB5EAD22833FD900CBD621 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				F3BB5EAE2283402800CBD621 /* WikiaListViewController.swift */,
-				F3BB5EB02283406D00CBD621 /* WikiaViewCell.swift */,
+				F315B1BB2284985600D445B2 /* Model */,
+				F315B1BA2284984100D445B2 /* View */,
+				F315B1BC2284989000D445B2 /* WikiasListCyclone.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -298,13 +345,17 @@
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Dependencies/iOS/Action.framework",
 				"$(SRCROOT)/Dependencies/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Dependencies/iOS/RxFeedback.framework",
 				"$(SRCROOT)/Dependencies/iOS/RxRelay.framework",
 				"$(SRCROOT)/Dependencies/iOS/RxSwift.framework",
 			);
 			name = Accio;
 			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Action.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxFeedback.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxRelay.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 			);
@@ -319,9 +370,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F315B1B5228497FE00D445B2 /* Cyclones.swift in Sources */,
 				F3BB5EB12283406D00CBD621 /* WikiaViewCell.swift in Sources */,
 				F3BB5EAF2283402800CBD621 /* WikiaListViewController.swift in Sources */,
+				F315B1BF22849C6300D445B2 /* WikiaOverview.swift in Sources */,
+				F315B1BD2284989000D445B2 /* WikiasListCyclone.swift in Sources */,
 				F3BB5EB4228476D500CBD621 /* CALayer+IB.swift in Sources */,
+				F315B1B72284980800D445B2 /* Event.swift in Sources */,
+				F315B1B92284980F00D445B2 /* State.swift in Sources */,
 				F3BB5E86228331BC00CBD621 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

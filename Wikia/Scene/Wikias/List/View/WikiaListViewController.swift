@@ -10,13 +10,13 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-private let data = ["In computing, reactive programming is a programming paradigm oriented around data flows and the propagation of change. This means that it should be possible to express static or dynamic data flows with ease in the programming languages used, and that the underlying execution model will automatically propagate changes through the data flow"]
-
 final class WikiaListViewController: UICollectionViewController {
 
     @IBOutlet private weak var layout: UICollectionViewFlowLayout!
 
     private let disposeBag = DisposeBag()
+
+    private let cyclone = WikiasListCyclone()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +25,14 @@ final class WikiaListViewController: UICollectionViewController {
         layout.itemSize = UICollectionViewFlowLayout.automaticSize
 
         bind()
+        cyclone.load.execute(())
     }
 
     private func bind() {
-        Observable.just(data)
+        cyclone.output[\.wikias]
             .bind(to: collectionView.rx.items(cellIdentifier: "wikiaCell", cellType: WikiaViewCell.self)) { _, item, cell in
-                cell.title.text = item
+                cell.title.text = item.title
+                cell.image.image = item.image
             }
             .disposed(by: disposeBag)
     }

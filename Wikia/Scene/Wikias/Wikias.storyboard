@@ -93,6 +93,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <outlet property="image" destination="rOZ-2a-wDd" id="FSA-LI-8Ws"/>
                                     <outlet property="title" destination="jLC-MH-Glt" id="M5L-4L-ae0"/>
                                 </connections>
                             </collectionViewCell>

@@ -2,6 +2,24 @@
   "object": {
     "pins": [
       {
+        "package": "Action",
+        "repositoryURL": "https://github.com/RxSwiftCommunity/Action.git",
+        "state": {
+          "branch": null,
+          "revision": "cdade63f7bbe1f5e1eff7779e5858a796dc2c001",
+          "version": "4.0.1"
+        }
+      },
+      {
+        "package": "RxFeedback",
+        "repositoryURL": "https://github.com/NoTests/RxFeedback.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "cbd500b8dcf1ae72e8c09f26e8f7f5a03268b58d",
+          "version": "3.0.0"
+        }
+      },
+      {
         "package": "RxSwift",
         "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
         "state": {

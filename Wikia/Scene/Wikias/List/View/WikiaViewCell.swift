@@ -11,6 +11,7 @@ import UIKit
 final class WikiaViewCell: UICollectionViewCell {
 
     @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var image: UIImageView!
 
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
         setNeedsLayout()
