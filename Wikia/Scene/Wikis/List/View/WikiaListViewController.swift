@@ -16,7 +16,7 @@ final class WikiaListViewController: UICollectionViewController {
 
     private let disposeBag = DisposeBag()
 
-    private let cyclone = WikiasListCyclone()
+    private let cyclone = WikisListCyclone()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +24,19 @@ final class WikiaListViewController: UICollectionViewController {
         layout.estimatedItemSize = layout.itemSize
         layout.itemSize = UICollectionViewFlowLayout.automaticSize
 
+        collectionView.delegate = nil
+        collectionView.dataSource = nil
+
         bind()
         cyclone.load.execute(())
     }
 
     private func bind() {
-        cyclone.output[\.wikias]
-            .bind(to: collectionView.rx.items(cellIdentifier: "wikiaCell", cellType: WikiaViewCell.self)) { _, item, cell in
+        cyclone.output[\.wikis]
+            .bind(to: collectionView.rx.items(
+                cellIdentifier: R.reuseIdentifier.wikiCell.identifier,
+                cellType: WikiaViewCell.self
+            )) { _, item, cell in
                 cell.title.text = item.title
                 cell.image.image = item.image
             }

@@ -1,5 +1,5 @@
 //
-//  WikiaOverview.swift
+//  WikiOverview.swift
 //  Wikia
 //
 //  Created by BOGU$ on 09/05/2019.
@@ -8,7 +8,16 @@
 
 import UIKit
 
-struct WikiaOverview {
+struct WikiOverview {
     let title: String
     let image: UIImage?
+}
+
+extension WikiOverview {
+
+    init(from wiki: Wiki) {
+        title = wiki.title
+        image = nil
+    }
+
 }
