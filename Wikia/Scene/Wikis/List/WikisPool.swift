@@ -11,8 +11,8 @@ import RxSwift
 final class WikisPool: DataPool {
     typealias DataRequest = WikiaAPI.Wikis
 
-    func list() -> Single<WikisList> {
-        return decodedData(from: .list(limit: 25, batch: 1))
+    func list(batch: UInt = 1) -> Single<Batch<Wiki>> {
+        return decodedData(from: .list(limit: Batch<Wiki>.limit, batch: batch))
     }
     
 }

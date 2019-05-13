@@ -25,7 +25,7 @@ struct WikiaAPI: RestAPI {
     }
 
     struct List: WikiaEndpoint, GetEndpoint {
-        typealias Result = WikisList
+        typealias Result = Batch<Wiki>
 
         let path: String = "/Wikis/List"
 

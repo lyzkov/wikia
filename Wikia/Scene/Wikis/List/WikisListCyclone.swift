@@ -12,25 +12,29 @@ final class WikisListCyclone: Cyclone {
     
     struct State: ReducibleState {
         enum Event: EventType {
-            case load(data: WikisList)
+            case load(wikis: [Wiki])
         }
 
         static let initial = State(wikis: [])
 
-        let wikis: [WikiOverview]
+        let wikis: [Wiki]
 
         static func reduce(state: State, _ event: Event) -> State {
             switch event {
-            case .load(let data):
-                return .init(wikis: data.items.map { WikiOverview(from: $0) })
+            case .load(let wikis):
+                return .init(wikis: wikis)
             }
         }
     }
 
     let pool = WikisPool()
 
-    lazy var load = pool.list().asAction(Event.load)
+    lazy var trigger = PublishSubject<Void>()
+
+    lazy var load = Feed(trigger: trigger, factory: pool.list).map(Event.load)
 
     lazy var output = state(from: load)
+
+    lazy var wikiOverviews = output[\.wikis].map { $0.map(WikiOverview.init) }
 
 }

@@ -8,12 +8,6 @@
 
 import Codextended
 
-struct WikisList: Decodable {
-
-    let items: [Wiki]
-    
-}
-
 struct Wiki: Decodable {
 
     let title: String

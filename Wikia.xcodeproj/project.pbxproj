@@ -27,13 +27,16 @@
 		F315B1D82288911800D445B2 /* DataPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315B1D72288911800D445B2 /* DataPool.swift */; };
 		F315B1DA2288B09100D445B2 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315B1D92288B09100D445B2 /* Operators.swift */; };
 		F315B1DE2288B7FB00D445B2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315B1DD2288B7FB00D445B2 /* R.generated.swift */; };
+		F315B1E12288BA5A00D445B2 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315B1E02288BA5A00D445B2 /* Feed.swift */; };
+		F315B1E32288BD0F00D445B2 /* Batch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315B1E22288BD0F00D445B2 /* Batch.swift */; };
+		F315B1E52288CD9E00D445B2 /* UIScrollView+Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315B1E42288CD9E00D445B2 /* UIScrollView+Feed.swift */; };
 		F3BB5E86228331BC00CBD621 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB5E85228331BC00CBD621 /* AppDelegate.swift */; };
 		F3BB5E8D228331BC00CBD621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3BB5E8C228331BC00CBD621 /* Assets.xcassets */; };
 		F3BB5E90228331BC00CBD621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3BB5E8E228331BC00CBD621 /* LaunchScreen.storyboard */; };
 		F3BB5E9B228331BC00CBD621 /* WikiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB5E9A228331BC00CBD621 /* WikiaTests.swift */; };
 		F3BB5EAC2283340000CBD621 /* Wikis.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3BB5EAB2283340000CBD621 /* Wikis.storyboard */; };
-		F3BB5EAF2283402800CBD621 /* WikiaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB5EAE2283402800CBD621 /* WikiaListViewController.swift */; };
-		F3BB5EB12283406D00CBD621 /* WikiaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB5EB02283406D00CBD621 /* WikiaViewCell.swift */; };
+		F3BB5EAF2283402800CBD621 /* WikisListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB5EAE2283402800CBD621 /* WikisListViewController.swift */; };
+		F3BB5EB12283406D00CBD621 /* WikiOverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB5EB02283406D00CBD621 /* WikiOverviewCell.swift */; };
 		F3BB5EB4228476D500CBD621 /* CALayer+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB5EB3228476D500CBD621 /* CALayer+IB.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +75,9 @@
 		F315B1D72288911800D445B2 /* DataPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPool.swift; sourceTree = "<group>"; };
 		F315B1D92288B09100D445B2 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		F315B1DD2288B7FB00D445B2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		F315B1E02288BA5A00D445B2 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		F315B1E22288BD0F00D445B2 /* Batch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Batch.swift; sourceTree = "<group>"; };
+		F315B1E42288CD9E00D445B2 /* UIScrollView+Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Feed.swift"; sourceTree = "<group>"; };
 		F3BB5E82228331BC00CBD621 /* Wikia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wikia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3BB5E85228331BC00CBD621 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3BB5E8C228331BC00CBD621 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,8 +87,8 @@
 		F3BB5E9A228331BC00CBD621 /* WikiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiaTests.swift; sourceTree = "<group>"; };
 		F3BB5E9C228331BC00CBD621 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3BB5EAB2283340000CBD621 /* Wikis.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wikis.storyboard; sourceTree = "<group>"; };
-		F3BB5EAE2283402800CBD621 /* WikiaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiaListViewController.swift; sourceTree = "<group>"; };
-		F3BB5EB02283406D00CBD621 /* WikiaViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiaViewCell.swift; sourceTree = "<group>"; };
+		F3BB5EAE2283402800CBD621 /* WikisListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikisListViewController.swift; sourceTree = "<group>"; };
+		F3BB5EB02283406D00CBD621 /* WikiOverviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiOverviewCell.swift; sourceTree = "<group>"; };
 		F3BB5EB3228476D500CBD621 /* CALayer+IB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+IB.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,8 +145,8 @@
 		F315B1BA2284984100D445B2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F3BB5EAE2283402800CBD621 /* WikiaListViewController.swift */,
-				F3BB5EB02283406D00CBD621 /* WikiaViewCell.swift */,
+				F3BB5EAE2283402800CBD621 /* WikisListViewController.swift */,
+				F3BB5EB02283406D00CBD621 /* WikiOverviewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				F315B1D322888BA900D445B2 /* Wiki.swift */,
+				F315B1E22288BD0F00D445B2 /* Batch.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,6 +198,15 @@
 				F315B1DD2288B7FB00D445B2 /* R.generated.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		F315B1DF2288BA3C00D445B2 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				F315B1E02288BA5A00D445B2 /* Feed.swift */,
+				F315B1E42288CD9E00D445B2 /* UIScrollView+Feed.swift */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 		F3BB5E79228331BC00CBD621 = {
@@ -245,10 +261,11 @@
 		F3BB5EA62283331500CBD621 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				F315B1CD228770A600D445B2 /* Networking */,
-				F315B1C0228753D800D445B2 /* RESTorm */,
 				F315B1B3228497DD00D445B2 /* Cyclones */,
 				F3BB5EB22284769400CBD621 /* Extensions */,
+				F315B1DF2288BA3C00D445B2 /* Feed */,
+				F315B1CD228770A600D445B2 /* Networking */,
+				F315B1C0228753D800D445B2 /* RESTorm */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -520,14 +537,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F315B1E32288BD0F00D445B2 /* Batch.swift in Sources */,
 				F315B1B5228497FE00D445B2 /* Cyclones.swift in Sources */,
-				F3BB5EB12283406D00CBD621 /* WikiaViewCell.swift in Sources */,
+				F3BB5EB12283406D00CBD621 /* WikiOverviewCell.swift in Sources */,
 				F315B1DA2288B09100D445B2 /* Operators.swift in Sources */,
 				F315B1D122888B6700D445B2 /* WikiaEndpoint.swift in Sources */,
-				F3BB5EAF2283402800CBD621 /* WikiaListViewController.swift in Sources */,
+				F3BB5EAF2283402800CBD621 /* WikisListViewController.swift in Sources */,
 				F315B1BF22849C6300D445B2 /* WikiOverview.swift in Sources */,
 				F315B1D6228890DE00D445B2 /* WikisPool.swift in Sources */,
 				F315B1BD2284989000D445B2 /* WikisListCyclone.swift in Sources */,
+				F315B1E52288CD9E00D445B2 /* UIScrollView+Feed.swift in Sources */,
 				F315B1CC228769D700D445B2 /* URL+ExpressibleByString.swift in Sources */,
 				F315B1DE2288B7FB00D445B2 /* R.generated.swift in Sources */,
 				F3BB5EB4228476D500CBD621 /* CALayer+IB.swift in Sources */,
@@ -540,6 +559,7 @@
 				F315B1C4228768BD00D445B2 /* Decode.swift in Sources */,
 				F315B1B92284980F00D445B2 /* State.swift in Sources */,
 				F315B1C6228768D600D445B2 /* Endpoint.swift in Sources */,
+				F315B1E12288BA5A00D445B2 /* Feed.swift in Sources */,
 				F3BB5E86228331BC00CBD621 /* AppDelegate.swift in Sources */,
 				F315B1C8228768EA00D445B2 /* HTTPHeaders.swift in Sources */,
 			);

@@ -1,5 +1,5 @@
 //
-//  WikiaViewCell.swift
+//  WikiOverviewCell.swift
 //  Wikia
 //
 //  Created by BOGU$ on 08/05/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class WikiaViewCell: UICollectionViewCell {
+final class WikiOverviewCell: UICollectionViewCell {
 
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var image: UIImageView!

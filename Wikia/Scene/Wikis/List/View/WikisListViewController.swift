@@ -1,5 +1,5 @@
 //
-//  WikiaListViewController.swift
+//  WikisListViewController.swift
 //  Wikia
 //
 //  Created by BOGU$ on 08/05/2019.
@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-final class WikiaListViewController: UICollectionViewController {
+final class WikisListViewController: UICollectionViewController {
 
     @IBOutlet private weak var layout: UICollectionViewFlowLayout!
 
@@ -28,18 +28,21 @@ final class WikiaListViewController: UICollectionViewController {
         collectionView.dataSource = nil
 
         bind()
-        cyclone.load.execute(())
     }
 
     private func bind() {
-        cyclone.output[\.wikis]
+        cyclone.wikiOverviews
             .bind(to: collectionView.rx.items(
-                cellIdentifier: R.reuseIdentifier.wikiCell.identifier,
-                cellType: WikiaViewCell.self
+                cellIdentifier: R.reuseIdentifier.wikiOverviewCell.identifier,
+                cellType: WikiOverviewCell.self
             )) { _, item, cell in
                 cell.title.text = item.title
                 cell.image.image = item.image
             }
+            .disposed(by: disposeBag)
+
+        collectionView.rx.didReachBottom()
+            .bind(to: cyclone.trigger)
             .disposed(by: disposeBag)
     }
 
