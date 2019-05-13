@@ -9,6 +9,8 @@
 import RxSwift
 
 final class WikisListCyclone: Cyclone {
+
+    // Machine state (store + reducer)
     
     struct State: ReducibleState {
         enum Event: EventType {
@@ -19,22 +21,32 @@ final class WikisListCyclone: Cyclone {
 
         let wikis: [Wiki]
 
+        var overviews: [WikiOverview] {
+            return wikis.map(WikiOverview.init)
+        }
+
         static func reduce(state: State, _ event: Event) -> State {
             switch event {
-            case .load(let wikis):
+            case let .load(wikis):
                 return .init(wikis: wikis)
             }
         }
     }
 
-    let pool = WikisPool()
+    // Inputs
 
     lazy var trigger = PublishSubject<Void>()
 
-    lazy var load = Feed(trigger: trigger, factory: pool.list).map(Event.load)
+    // Outputs
 
-    lazy var output = state(from: load)
+    lazy var output = state(from: wikis)
 
-    lazy var wikiOverviews = output[\.wikis].map { $0.map(WikiOverview.init) }
+    // Dependencies
+
+    private let pool = WikisPool()
+
+    // Events
+
+    private lazy var wikis = Feed(trigger: trigger, factory: pool.list).map(Event.load)
 
 }

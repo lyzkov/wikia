@@ -1,5 +1,5 @@
 //
-//  Cyclones.swift
+//  Cyclone.swift
 //  Wikia
 //
 //  Created by BOGU$ on 09/05/2019.
@@ -15,6 +15,7 @@ protocol Cyclone {
     typealias Event = State.Event
 
     func state(from events: Observable<Event>) -> Observable<State>
+    func state(from events: Observable<Event>...) -> Observable<State>
     func state(from actions: EventAction<Event>...) -> Observable<State>
 
     var output: Observable<State> { get }
@@ -31,6 +32,10 @@ extension Cyclone {
                 feedback: { _ in events }
             )
             .share(replay: 1)
+    }
+
+    func state(from events: Observable<Event>...) -> Observable<State> {
+        return state(from: Observable.merge(events))
     }
 
     func state(from actions: EventAction<Event>...) -> Observable<State> {

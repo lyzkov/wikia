@@ -10,14 +10,14 @@ import UIKit
 
 struct WikiOverview {
     let title: String
-    let image: UIImage?
+    let imageURL: URL?
 }
 
 extension WikiOverview {
 
     init(from wiki: Wiki) {
         title = wiki.title
-        image = nil
+        imageURL = wiki.image
     }
 
 }

@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Kingfisher
 
 final class WikisListViewController: UICollectionViewController {
 
@@ -31,14 +32,37 @@ final class WikisListViewController: UICollectionViewController {
     }
 
     private func bind() {
-        cyclone.wikiOverviews
+        let wikiOverviews = cyclone.output[\.overviews].share()
+
+        wikiOverviews
             .bind(to: collectionView.rx.items(
                 cellIdentifier: R.reuseIdentifier.wikiOverviewCell.identifier,
                 cellType: WikiOverviewCell.self
             )) { _, item, cell in
-                cell.title.text = item.title
-                cell.image.image = item.image
+                cell.bind(item: item)
             }
+            .disposed(by: disposeBag)
+
+        collectionView.rx.prefetchItems
+            .map { $0.map { $0.item } }
+            .withLatestFrom(wikiOverviews) { indexes, overviews in
+                indexes.map { overviews[$0] }
+            }
+            .map { $0.compactMap { $0.imageURL } }
+            .subscribe(onNext: { urls in
+                ImagePrefetcher(urls: urls).start()
+            })
+            .disposed(by: disposeBag)
+
+        collectionView.rx.cancelPrefetchingForItems
+            .map { $0.map { $0.item } }
+            .withLatestFrom(wikiOverviews) { indexes, overviews in
+                indexes.map { overviews[$0] }
+            }
+            .map { $0.compactMap { $0.imageURL } }
+            .subscribe(onNext: { urls in
+                ImagePrefetcher(urls: urls).stop()
+            })
             .disposed(by: disposeBag)
 
         collectionView.rx.didReachBottom()

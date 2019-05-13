@@ -17,6 +17,7 @@ target 'Wikia' do
   pod 'RxAlamofire'
   pod 'AlamofireNetworkActivityLogger'
   pod 'Codextended'
+  pod 'Kingfisher'
 
   target 'WikiaTests' do
     inherit! :search_paths
