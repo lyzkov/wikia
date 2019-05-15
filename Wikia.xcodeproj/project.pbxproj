@@ -140,14 +140,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		F315B1B3228497DD00D445B2 /* Cyclones */ = {
+		F315B1B3228497DD00D445B2 /* RxCyclone */ = {
 			isa = PBXGroup;
 			children = (
 				F315B1B4228497FE00D445B2 /* Cyclone.swift */,
 				F315B1B62284980800D445B2 /* Event.swift */,
 				F315B1B82284980F00D445B2 /* State.swift */,
 			);
-			path = Cyclones;
+			path = RxCyclone;
 			sourceTree = "<group>";
 		};
 		F315B1BA2284984100D445B2 /* View */ = {
@@ -167,7 +167,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F315B1C0228753D800D445B2 /* RESTorm */ = {
+		F315B1C0228753D800D445B2 /* RxStorm */ = {
 			isa = PBXGroup;
 			children = (
 				F315B1D72288911800D445B2 /* DataPool.swift */,
@@ -178,7 +178,7 @@
 				F315B1C1228768A700D445B2 /* RestAPI.swift */,
 				F315B1C92287690700D445B2 /* SessionManager.swift */,
 			);
-			path = RESTorm;
+			path = RxStorm;
 			sourceTree = "<group>";
 		};
 		F315B1CD228770A600D445B2 /* Networking */ = {
@@ -208,13 +208,13 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
-		F315B1DF2288BA3C00D445B2 /* Feed */ = {
+		F315B1DF2288BA3C00D445B2 /* RxCascade */ = {
 			isa = PBXGroup;
 			children = (
 				F315B1E02288BA5A00D445B2 /* Feed.swift */,
 				F315B1E42288CD9E00D445B2 /* UIScrollView+Feed.swift */,
 			);
-			path = Feed;
+			path = RxCascade;
 			sourceTree = "<group>";
 		};
 		F315B1EE228AF68000D445B2 /* Details */ = {
@@ -243,12 +243,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F315B1F9228B9AAD00D445B2 /* Segue */ = {
+		F315B1F9228B9AAD00D445B2 /* RxNavy */ = {
 			isa = PBXGroup;
 			children = (
 				F315B1F7228B8D9800D445B2 /* UIViewController+RxSegue.swift */,
 			);
-			path = Segue;
+			path = RxNavy;
 			sourceTree = "<group>";
 		};
 		F3BB5E79228331BC00CBD621 = {
@@ -303,12 +303,12 @@
 		F3BB5EA62283331500CBD621 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				F315B1B3228497DD00D445B2 /* Cyclones */,
 				F3BB5EB22284769400CBD621 /* Extensions */,
-				F315B1DF2288BA3C00D445B2 /* Feed */,
 				F315B1CD228770A600D445B2 /* Networking */,
-				F315B1C0228753D800D445B2 /* RESTorm */,
-				F315B1F9228B9AAD00D445B2 /* Segue */,
+				F315B1DF2288BA3C00D445B2 /* RxCascade */,
+				F315B1B3228497DD00D445B2 /* RxCyclone */,
+				F315B1F9228B9AAD00D445B2 /* RxNavy */,
+				F315B1C0228753D800D445B2 /* RxStorm */,
 			);
 			path = Common;
 			sourceTree = "<group>";
