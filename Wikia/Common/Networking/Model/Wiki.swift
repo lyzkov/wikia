@@ -10,9 +10,21 @@ import Codextended
 
 struct Wiki: Decodable {
 
+    struct Stats: Decodable {
+        let users: Int
+        let articles: Int
+        let pages: Int
+        let admins: Int
+        let activeUsers: Int
+        let edits: Int
+        let videos: Int
+        let images: Int
+    }
+
     let title: String
     let desc: String
     let image: URL?
+    let stats: Stats
 
     init(from decoder: Decoder) throws {
         title = try decoder.decode("title")
@@ -20,6 +32,8 @@ struct Wiki: Decodable {
 
         let imageUrlString = try decoder.decode("image") as String
         image = URL(string: imageUrlString.replacingOccurrences(of: "\n", with: ""))
+        
+        stats = try decoder.decode("stats")
     }
 
 }

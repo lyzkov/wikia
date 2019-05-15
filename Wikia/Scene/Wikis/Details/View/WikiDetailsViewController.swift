@@ -21,6 +21,8 @@ final class WikiDetailsViewController: UIViewController {
 
     @IBOutlet private weak var openWebsiteButton: UIButton!
 
+    @IBOutlet var stats: [UILabel]!
+
     private let disposeBag = DisposeBag()
 
     private lazy var processor = DownsamplingImageProcessor(size: wikiImage.frame.size)
@@ -51,11 +53,29 @@ final class WikiDetailsViewController: UIViewController {
                         .processor(self.processor),
                         .scaleFactor(UIScreen.main.scale),
                         .transition(.fade(0.25)),
-                        .cacheOriginalImage
+                        .cacheOriginalImage,
                     ]
                 )
             })
             .disposed(by: disposeBag)
+
+        details.map { $0.stats }
+            .subscribe(onNext: { [unowned self] wikiStats in
+                for item in wikiStats {
+                    self.stats.item(item.tag)?.text = item.description
+                }
+            })
+            .disposed(by: disposeBag)
+    }
+
+}
+
+fileprivate extension Array where Element: UIView {
+
+    func item(_ tag: Int) -> Element? {
+        return first { view in
+            view.tag == tag
+        }
     }
 
 }

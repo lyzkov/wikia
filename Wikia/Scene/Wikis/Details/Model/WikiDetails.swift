@@ -9,9 +9,12 @@
 import Foundation
 
 struct WikiDetails {
+
     let title: String
     let description: String
     let imageURL: URL?
+    let stats: [WikiStats]
+    
 }
 
 extension WikiDetails {
@@ -20,6 +23,7 @@ extension WikiDetails {
         title = wiki.title
         description = wiki.desc
         imageURL = wiki.image
+        stats = .init(from: wiki.stats)
     }
 
 }

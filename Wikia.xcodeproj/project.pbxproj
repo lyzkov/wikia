@@ -34,6 +34,8 @@
 		F315B1F4228AF78600D445B2 /* WikiDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315B1F3228AF78600D445B2 /* WikiDetails.swift */; };
 		F315B1F6228AF7D200D445B2 /* WikiDetailsCyclone.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315B1F5228AF7D200D445B2 /* WikiDetailsCyclone.swift */; };
 		F315B1F8228B8D9800D445B2 /* UIViewController+RxSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315B1F7228B8D9800D445B2 /* UIViewController+RxSegue.swift */; };
+		F315B1FD228C452F00D445B2 /* WikiStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315B1FC228C452F00D445B2 /* WikiStats.swift */; };
+		F35B9187228CC7BE000F219A /* FixedHeightAspectFitImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B9186228CC7BE000F219A /* FixedHeightAspectFitImageView.swift */; };
 		F3BB5E86228331BC00CBD621 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB5E85228331BC00CBD621 /* AppDelegate.swift */; };
 		F3BB5E8D228331BC00CBD621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3BB5E8C228331BC00CBD621 /* Assets.xcassets */; };
 		F3BB5E90228331BC00CBD621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3BB5E8E228331BC00CBD621 /* LaunchScreen.storyboard */; };
@@ -86,6 +88,8 @@
 		F315B1F3228AF78600D445B2 /* WikiDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiDetails.swift; sourceTree = "<group>"; };
 		F315B1F5228AF7D200D445B2 /* WikiDetailsCyclone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiDetailsCyclone.swift; sourceTree = "<group>"; };
 		F315B1F7228B8D9800D445B2 /* UIViewController+RxSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+RxSegue.swift"; sourceTree = "<group>"; };
+		F315B1FC228C452F00D445B2 /* WikiStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiStats.swift; sourceTree = "<group>"; };
+		F35B9186228CC7BE000F219A /* FixedHeightAspectFitImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedHeightAspectFitImageView.swift; sourceTree = "<group>"; };
 		F3BB5E82228331BC00CBD621 /* Wikia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wikia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3BB5E85228331BC00CBD621 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3BB5E8C228331BC00CBD621 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				F315B1F3228AF78600D445B2 /* WikiDetails.swift */,
+				F315B1FC228C452F00D445B2 /* WikiStats.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -249,6 +254,14 @@
 				F315B1F7228B8D9800D445B2 /* UIViewController+RxSegue.swift */,
 			);
 			path = RxNavy;
+			sourceTree = "<group>";
+		};
+		F35B9185228CC79F000F219A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F35B9186228CC7BE000F219A /* FixedHeightAspectFitImageView.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		F3BB5E79228331BC00CBD621 = {
@@ -309,6 +322,7 @@
 				F315B1B3228497DD00D445B2 /* RxCyclone */,
 				F315B1F9228B9AAD00D445B2 /* RxNavy */,
 				F315B1C0228753D800D445B2 /* RxStorm */,
+				F35B9185228CC79F000F219A /* UI */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -590,6 +604,7 @@
 				F315B1DA2288B09100D445B2 /* Operators.swift in Sources */,
 				F315B1D122888B6700D445B2 /* WikiaEndpoint.swift in Sources */,
 				F3BB5EAF2283402800CBD621 /* WikisListViewController.swift in Sources */,
+				F315B1FD228C452F00D445B2 /* WikiStats.swift in Sources */,
 				F315B1BF22849C6300D445B2 /* WikiOverview.swift in Sources */,
 				F315B1D6228890DE00D445B2 /* WikisPool.swift in Sources */,
 				F315B1BD2284989000D445B2 /* WikisListCyclone.swift in Sources */,
@@ -606,6 +621,7 @@
 				F315B1D422888BA900D445B2 /* Wiki.swift in Sources */,
 				F315B1B72284980800D445B2 /* Event.swift in Sources */,
 				F315B1C4228768BD00D445B2 /* Decode.swift in Sources */,
+				F35B9187228CC7BE000F219A /* FixedHeightAspectFitImageView.swift in Sources */,
 				F315B1B92284980F00D445B2 /* State.swift in Sources */,
 				F315B1C6228768D600D445B2 /* Endpoint.swift in Sources */,
 				F315B1E12288BA5A00D445B2 /* Feed.swift in Sources */,
