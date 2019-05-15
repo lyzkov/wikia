@@ -17,7 +17,7 @@ final class WikisListViewController: UICollectionViewController {
 
     private let disposeBag = DisposeBag()
 
-    private let cyclone = WikisListCyclone()
+    let cyclone = WikisListCyclone()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +34,8 @@ final class WikisListViewController: UICollectionViewController {
     private func bind() {
         let wikiOverviews = cyclone.output[\.overviews].share()
 
+        // Configure cell
+
         wikiOverviews
             .bind(to: collectionView.rx.items(
                 cellIdentifier: R.reuseIdentifier.wikiOverviewCell.identifier,
@@ -42,6 +44,8 @@ final class WikisListViewController: UICollectionViewController {
                 cell.bind(item: item)
             }
             .disposed(by: disposeBag)
+
+        // Images prefetching
 
         collectionView.rx.prefetchItems
             .map { $0.map { $0.item } }
@@ -65,8 +69,24 @@ final class WikisListViewController: UICollectionViewController {
             })
             .disposed(by: disposeBag)
 
+        // Loading next batches
+
         collectionView.rx.didReachBottom()
             .bind(to: cyclone.trigger)
+            .disposed(by: disposeBag)
+
+        // Navigation
+
+        // TODO: add select item command to the state machine in wikis list cyclone?
+        cyclone.output[\.wikis]
+            .bind(to:
+                collectionView.rx.selectedItem(
+                    segue: rx.segue(identifier: R.segue.wikisListViewController.showWikiDetails.identifier),
+                    destinationType: WikiDetailsViewController.self
+                )
+            ) { item, destination in
+                destination.cyclone.wiki.onNext(item)
+            }
             .disposed(by: disposeBag)
     }
 
