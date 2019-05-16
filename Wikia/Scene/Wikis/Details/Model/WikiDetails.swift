@@ -13,6 +13,7 @@ struct WikiDetails {
     let title: String
     let description: String
     let imageURL: URL?
+    let websiteURL: URL?
     let stats: [WikiStats]
     
 }
@@ -23,6 +24,7 @@ extension WikiDetails {
         title = wiki.title
         description = wiki.desc
         imageURL = wiki.image
+        websiteURL = wiki.url
         stats = .init(from: wiki.stats)
     }
 

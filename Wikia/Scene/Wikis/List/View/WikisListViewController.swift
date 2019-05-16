@@ -77,15 +77,14 @@ final class WikisListViewController: UICollectionViewController {
 
         // Navigation
 
-        // TODO: add select item command to the state machine in wikis list cyclone?
+        // TODO: add select item event to cyclone?
         cyclone.output[\.wikis]
             .bind(to:
                 collectionView.rx.selectedItem(
-                    segue: rx.segue(identifier: R.segue.wikisListViewController.showWikiDetails.identifier),
-                    destinationType: WikiDetailsViewController.self
+                    segue: rx.segue(identifier: R.segue.wikisListViewController.showWikiDetails.identifier)
                 )
-            ) { item, destination in
-                destination.cyclone.wiki.onNext(item)
+            ) { (wiki: Wiki, destination: WikiDetailsViewController) in
+                destination.cyclone.wiki.onNext(wiki)
             }
             .disposed(by: disposeBag)
     }

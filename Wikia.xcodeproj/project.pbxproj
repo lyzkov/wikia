@@ -36,6 +36,8 @@
 		F315B1F8228B8D9800D445B2 /* UIViewController+RxSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315B1F7228B8D9800D445B2 /* UIViewController+RxSegue.swift */; };
 		F315B1FD228C452F00D445B2 /* WikiStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315B1FC228C452F00D445B2 /* WikiStats.swift */; };
 		F35B9187228CC7BE000F219A /* FixedHeightAspectFitImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B9186228CC7BE000F219A /* FixedHeightAspectFitImageView.swift */; };
+		F35B9189228CD043000F219A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F35B9188228CD043000F219A /* WebKit.framework */; };
+		F35B918D228CD0BF000F219A /* WikiWebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B918C228CD0BF000F219A /* WikiWebsiteViewController.swift */; };
 		F3BB5E86228331BC00CBD621 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB5E85228331BC00CBD621 /* AppDelegate.swift */; };
 		F3BB5E8D228331BC00CBD621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3BB5E8C228331BC00CBD621 /* Assets.xcassets */; };
 		F3BB5E90228331BC00CBD621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3BB5E8E228331BC00CBD621 /* LaunchScreen.storyboard */; };
@@ -90,6 +92,8 @@
 		F315B1F7228B8D9800D445B2 /* UIViewController+RxSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+RxSegue.swift"; sourceTree = "<group>"; };
 		F315B1FC228C452F00D445B2 /* WikiStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiStats.swift; sourceTree = "<group>"; };
 		F35B9186228CC7BE000F219A /* FixedHeightAspectFitImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedHeightAspectFitImageView.swift; sourceTree = "<group>"; };
+		F35B9188228CD043000F219A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		F35B918C228CD0BF000F219A /* WikiWebsiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiWebsiteViewController.swift; sourceTree = "<group>"; };
 		F3BB5E82228331BC00CBD621 /* Wikia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wikia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3BB5E85228331BC00CBD621 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3BB5E8C228331BC00CBD621 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F35B9189228CD043000F219A /* WebKit.framework in Frameworks */,
 				020203C1848132A13FFB8D2A /* Pods_Wikia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,6 +132,7 @@
 		DCDAD49677D51F77EA8164EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F35B9188228CD043000F219A /* WebKit.framework */,
 				77E77DEDC505D5185A07FDF3 /* Pods_Wikia.framework */,
 				E5D10A7EAAAD76BF9BB28D31 /* Pods_WikiaTests.framework */,
 			);
@@ -264,6 +270,22 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		F35B918A228CD090000F219A /* Website */ = {
+			isa = PBXGroup;
+			children = (
+				F35B918B228CD0A6000F219A /* View */,
+			);
+			path = Website;
+			sourceTree = "<group>";
+		};
+		F35B918B228CD0A6000F219A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F35B918C228CD0BF000F219A /* WikiWebsiteViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F3BB5E79228331BC00CBD621 = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +378,7 @@
 		F3BB5EAA2283338100CBD621 /* Wikis */ = {
 			isa = PBXGroup;
 			children = (
+				F35B918A228CD090000F219A /* Website */,
 				F315B1EE228AF68000D445B2 /* Details */,
 				F3BB5EAD22833FD900CBD621 /* List */,
 				F3BB5EAB2283340000CBD621 /* Wikis.storyboard */,
@@ -597,6 +620,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F35B918D228CD0BF000F219A /* WikiWebsiteViewController.swift in Sources */,
 				F315B1E32288BD0F00D445B2 /* Batch.swift in Sources */,
 				F315B1B5228497FE00D445B2 /* Cyclone.swift in Sources */,
 				F315B1F6228AF7D200D445B2 /* WikiDetailsCyclone.swift in Sources */,

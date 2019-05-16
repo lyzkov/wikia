@@ -158,6 +158,9 @@
                                                                 <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="szJ-NM-pFu" kind="show" identifier="showWebsite" id="jOv-BU-aqz"/>
+                                                        </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h73-P9-7l9" userLabel="Stats">
                                                         <rect key="frame" x="0.0" y="118.33333333333331" width="279" height="156"/>
@@ -429,6 +432,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9p-g2-nXv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1968.8" y="28.817733990147783"/>
+        </scene>
+        <!--Wiki Website View Controller-->
+        <scene sceneID="oFX-hg-peQ">
+            <objects>
+                <viewController id="szJ-NM-pFu" customClass="WikiWebsiteViewController" customModule="Wikia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KrX-oW-GhV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOg-4r-6MS">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0du-Ke-cva" firstAttribute="bottom" secondItem="BOg-4r-6MS" secondAttribute="bottom" id="9Of-fm-w3G"/>
+                            <constraint firstItem="BOg-4r-6MS" firstAttribute="top" secondItem="0du-Ke-cva" secondAttribute="top" id="Qbw-nz-Bmb"/>
+                            <constraint firstItem="0du-Ke-cva" firstAttribute="trailing" secondItem="BOg-4r-6MS" secondAttribute="trailing" id="SHl-aa-bA6"/>
+                            <constraint firstItem="BOg-4r-6MS" firstAttribute="leading" secondItem="0du-Ke-cva" secondAttribute="leading" id="wqq-gB-MnG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0du-Ke-cva"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="BOg-4r-6MS" id="u3x-oZ-9P7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sAy-Lh-tDi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2872.8000000000002" y="28.817733990147783"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Ug-WY-o6a">

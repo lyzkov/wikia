@@ -10,11 +10,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-typealias SegueObservable<Sender> = Observable<(UIStoryboardSegue, Sender)>
-
 extension Reactive where Base: UIViewController {
 
-    func segue<Sender>(identifier: String) -> SegueObservable<Sender> {
+    func segue<Sender>(identifier: String) -> Observable<(UIStoryboardSegue, Sender)> {
         return methodInvoked(#selector(Base.prepare(for:sender:)))
             .compactMap { args in
                 guard let segue = (args.first { ($0 as? UIStoryboardSegue)?.identifier == identifier }
@@ -26,34 +24,49 @@ extension Reactive where Base: UIViewController {
         }
     }
 
+    func segue<Destination: UIViewController, Sender>(identifier: String, destinationType: Destination.Type = Destination.self) -> Observable<(Destination, Sender)> {
+        return methodInvoked(#selector(Base.prepare(for:sender:)))
+            .compactMap { args in
+                guard let segue = (args.first { ($0 as? UIStoryboardSegue)?.identifier == identifier }
+                    as? UIStoryboardSegue),
+                    let destination = segue.destination as? Destination,
+                    let sender = args.last as? Sender else {
+                        return nil
+                }
+
+                return (destination, sender)
+            }
+    }
+
 }
 
-extension Reactive where Base: UICollectionView {
+extension Reactive where Base: UIButton {
 
-    func selectedItem<Item, Source: ObservableType>(segue: SegueObservable<UICollectionViewCell>)
+    func tap<Item, Destination: UIViewController, Source: ObservableType>
+        (segue: Observable<(Destination, Base)>)
         -> (_ source: Source)
-        -> (_ handler: @escaping (Item, UIStoryboardSegue) -> Void)
-        -> Disposable where Source.Element == [Item] {
+        -> (_ handler: @escaping (Item, Destination) -> Void)
+        -> Disposable where Source.Element == Item {
             return { source in
                 return { handler in
                     segue
                         .withLatestFrom(source) { ($0.0, $0.1, $1) }
-                        .compactMap { segue, cell, items in
-                            guard let indexPath = self.base.indexPath(for: cell) else {
-                                return nil
-                            }
-
-                            return (items[indexPath.item], segue)
+                        .filter { _, button, _ in
+                            button === self.base
                         }
-                        .subscribe(onNext: { item, segue in
-                            handler(item, segue)
+                        .subscribe(onNext: { destination, _, item in
+                            handler(item, destination)
                         })
                 }
             }
     }
 
+}
+
+extension Reactive where Base: UICollectionView {
+
     func selectedItem<Item, Destination: UIViewController, Source: ObservableType>
-        (segue: SegueObservable<UICollectionViewCell>, destinationType: Destination.Type = Destination.self)
+        (segue: Observable<(Destination, UICollectionViewCell)>)
         -> (_ source: Source)
         -> (_ handler: @escaping (Item, Destination) -> Void)
         -> Disposable where Source.Element == [Item] {
@@ -61,9 +74,8 @@ extension Reactive where Base: UICollectionView {
                 return { handler in
                     segue
                         .withLatestFrom(source) { ($0.0, $0.1, $1) }
-                        .compactMap { segue, cell, items in
-                            guard let indexPath = self.base.indexPath(for: cell),
-                                let destination = segue.destination as? Destination else {
+                        .compactMap { destination, cell, items in
+                            guard let indexPath = self.base.indexPath(for: cell) else {
                                 return nil
                             }
 

@@ -21,7 +21,7 @@ final class WikiDetailsViewController: UIViewController {
 
     @IBOutlet private weak var openWebsiteButton: UIButton!
 
-    @IBOutlet var stats: [UILabel]!
+    @IBOutlet private var stats: [UILabel]!
 
     private let disposeBag = DisposeBag()
 
@@ -31,6 +31,8 @@ final class WikiDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Details
 
         let details = cyclone.output[\.details]
             .compactMap { $0 }
@@ -59,12 +61,26 @@ final class WikiDetailsViewController: UIViewController {
             })
             .disposed(by: disposeBag)
 
+        // Stats
+
         details.map { $0.stats }
             .subscribe(onNext: { [unowned self] wikiStats in
                 for item in wikiStats {
                     self.stats.item(item.tag)?.text = item.description
                 }
             })
+            .disposed(by: disposeBag)
+
+        // Navigation
+
+        details.compactMap { $0.websiteURL }
+            .bind(
+                to: openWebsiteButton.rx.tap(
+                    segue: rx.segue(identifier: R.segue.wikiDetailsViewController.showWebsite.identifier)
+                )
+            ) { (url, destination: WikiWebsiteViewController) in
+                destination.url.onNext(url)
+            }
             .disposed(by: disposeBag)
     }
 

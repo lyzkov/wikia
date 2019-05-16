@@ -24,11 +24,14 @@ struct Wiki: Decodable {
     let title: String
     let desc: String
     let image: URL?
+    let url: URL?
     let stats: Stats
 
     init(from decoder: Decoder) throws {
         title = try decoder.decode("title")
         desc = try decoder.decode("desc")
+
+        url = try decoder.decode("url")
 
         let imageUrlString = try decoder.decode("image") as String
         image = URL(string: imageUrlString.replacingOccurrences(of: "\n", with: ""))
