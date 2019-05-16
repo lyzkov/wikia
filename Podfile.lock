@@ -1,10 +1,5 @@
 PODS:
-  - Action (4.0.0):
-    - RxCocoa (~> 5.0)
-    - RxSwift (~> 5.0)
   - Alamofire (4.8.2)
-  - AlamofireNetworkActivityLogger (2.4.0):
-    - Alamofire (~> 4.8)
   - Codextended (0.2.0)
   - Kingfisher (5.4.0)
   - R.swift (5.0.3):
@@ -26,9 +21,7 @@ PODS:
   - RxSwift (5.0.0)
 
 DEPENDENCIES:
-  - Action
   - Alamofire
-  - AlamofireNetworkActivityLogger
   - Codextended
   - Kingfisher
   - R.swift
@@ -39,9 +32,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - Action
     - Alamofire
-    - AlamofireNetworkActivityLogger
     - Codextended
     - Kingfisher
     - R.swift
@@ -53,9 +44,7 @@ SPEC REPOS:
     - RxSwift
 
 SPEC CHECKSUMS:
-  Action: 0d14986aad0f1330aa27ce65d0cdeaacbb63d91c
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  AlamofireNetworkActivityLogger: 6d3398c692d2c5d83b0c58793537860aca1e383d
   Codextended: 9974c2ce5c3f2191c75aebaf88172b852482c06f
   Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
@@ -66,6 +55,6 @@ SPEC CHECKSUMS:
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
 
-PODFILE CHECKSUM: 86c3714e1766f5321d3a481390fef9a77eb36689
+PODFILE CHECKSUM: 2eb068b7a24db16d9ce8ccaae956cfc827c99120
 
 COCOAPODS: 1.6.1

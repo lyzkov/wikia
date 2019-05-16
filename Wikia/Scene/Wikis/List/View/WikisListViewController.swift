@@ -78,6 +78,7 @@ final class WikisListViewController: UICollectionViewController {
         // Navigation
 
         // TODO: add select item event to cyclone?
+        // TODO: integrate with reactive coordinator pattern?
         cyclone.output[\.wikis]
             .bind(to:
                 collectionView.rx.selectedItem(

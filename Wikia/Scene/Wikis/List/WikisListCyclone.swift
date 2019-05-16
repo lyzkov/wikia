@@ -10,9 +10,10 @@ import RxSwift
 
 final class WikisListCyclone: Cyclone {
 
-    // Machine state (store + reducer)
+    // Machine state (store + reducer), keep business logic here
     
     struct State: ReducibleState {
+
         enum Event: EventType {
             case load(wikis: [Wiki])
         }
@@ -42,6 +43,7 @@ final class WikisListCyclone: Cyclone {
     lazy var output = state(from: wikis)
 
     // Dependencies
+    // TODO: Dependency Injection
 
     private let pool = WikisPool()
 

@@ -6,7 +6,6 @@
 //  Copyright © 2019 lyzkov. All rights reserved.
 //
 
-import Foundation
 import RxSwift
 
 protocol ReducibleState {

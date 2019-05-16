@@ -6,17 +6,12 @@
 //  Copyright © 2019 lyzkov. All rights reserved.
 //
 
-import Foundation
 import RxSwift
 import RxFeedback
 
 protocol Cyclone {
     associatedtype State: ReducibleState
     typealias Event = State.Event
-
-    func state(from events: Observable<Event>) -> Observable<State>
-    func state(from events: Observable<Event>...) -> Observable<State>
-    func state(from actions: EventAction<Event>...) -> Observable<State>
 
     var output: Observable<State> { get }
 }
@@ -36,10 +31,6 @@ extension Cyclone {
 
     func state(from events: Observable<Event>...) -> Observable<State> {
         return state(from: Observable.merge(events))
-    }
-
-    func state(from actions: EventAction<Event>...) -> Observable<State> {
-        return state(from: Observable.merge(actions.map { $0.elements }) )
     }
 
 }

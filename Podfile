@@ -9,11 +9,9 @@ target 'Wikia' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxFeedback'
-  pod 'Action'
   pod 'R.swift'
   pod 'Alamofire'
   pod 'RxAlamofire'
-  pod 'AlamofireNetworkActivityLogger'
   pod 'Codextended'
   pod 'Kingfisher'
 
