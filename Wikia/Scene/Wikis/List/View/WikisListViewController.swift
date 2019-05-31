@@ -88,6 +88,42 @@ final class WikisListViewController: UICollectionViewController {
                 destination.cyclone.wiki.onNext(wiki)
             }
             .disposed(by: disposeBag)
+
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        // Error
+
+        cyclone.output
+            .fireError(handler: self, retryLimit: 3)
+            .subscribe()
+            .disposed(by: disposeBag)
+    }
+
+}
+
+extension UIViewController: ErrorFiring {
+    typealias Error = Swift.Error
+}
+
+extension ErrorFiring where Self: UIViewController {
+
+    func fire(error: UIViewController.Error, complete: ((Fire) -> Void)?) {
+        let alert = UIAlertController(title: "", message: error.localizedDescription, preferredStyle: .alert)
+        alert.addAction(
+            UIAlertAction(title: "Retry", style: .cancel) { _ in
+                complete?(.miss)
+            }
+        )
+        alert.addAction(
+            UIAlertAction(title: "Close", style: .destructive) { _ in
+                complete?(.sink)
+            }
+        )
+
+        self.present(alert, animated: true)
     }
 
 }

@@ -46,6 +46,10 @@
 		F3BB5EAF2283402800CBD621 /* WikisListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB5EAE2283402800CBD621 /* WikisListViewController.swift */; };
 		F3BB5EB12283406D00CBD621 /* WikiOverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB5EB02283406D00CBD621 /* WikiOverviewCell.swift */; };
 		F3BB5EB4228476D500CBD621 /* CALayer+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BB5EB3228476D500CBD621 /* CALayer+IB.swift */; };
+		F3F75BB0229E90FB0050F1FC /* ErrorFiring.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F75BAF229E90FB0050F1FC /* ErrorFiring.swift */; };
+		F3F75BB6229E91430050F1FC /* LogErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F75BB5229E91430050F1FC /* LogErrorHandler.swift */; };
+		F3F75BBD22A0CC230050F1FC /* Retriable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F75BBC22A0CC230050F1FC /* Retriable.swift */; };
+		F3F75BBF22A147150050F1FC /* Loggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F75BBE22A147150050F1FC /* Loggable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +110,10 @@
 		F3BB5EAE2283402800CBD621 /* WikisListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikisListViewController.swift; sourceTree = "<group>"; };
 		F3BB5EB02283406D00CBD621 /* WikiOverviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiOverviewCell.swift; sourceTree = "<group>"; };
 		F3BB5EB3228476D500CBD621 /* CALayer+IB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+IB.swift"; sourceTree = "<group>"; };
+		F3F75BAF229E90FB0050F1FC /* ErrorFiring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorFiring.swift; sourceTree = "<group>"; };
+		F3F75BB5229E91430050F1FC /* LogErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogErrorHandler.swift; sourceTree = "<group>"; };
+		F3F75BBC22A0CC230050F1FC /* Retriable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Retriable.swift; sourceTree = "<group>"; };
+		F3F75BBE22A147150050F1FC /* Loggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loggable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +351,7 @@
 				F315B1DF2288BA3C00D445B2 /* RxCascade */,
 				F315B1B3228497DD00D445B2 /* RxCyclone */,
 				F315B1F9228B9AAD00D445B2 /* RxNavy */,
+				F3F75BAE229E8F6F0050F1FC /* RxSinkEmAll */,
 				F315B1C0228753D800D445B2 /* RxStorm */,
 				F35B9185228CC79F000F219A /* UI */,
 			);
@@ -404,6 +413,25 @@
 				F315B1CB228769D700D445B2 /* URL+ExpressibleByString.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F3F75BAE229E8F6F0050F1FC /* RxSinkEmAll */ = {
+			isa = PBXGroup;
+			children = (
+				F3F75BB3229E912A0050F1FC /* Handler */,
+				F3F75BAF229E90FB0050F1FC /* ErrorFiring.swift */,
+				F3F75BBC22A0CC230050F1FC /* Retriable.swift */,
+				F3F75BBE22A147150050F1FC /* Loggable.swift */,
+			);
+			path = RxSinkEmAll;
+			sourceTree = "<group>";
+		};
+		F3F75BB3229E912A0050F1FC /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				F3F75BB5229E91430050F1FC /* LogErrorHandler.swift */,
+			);
+			path = Handler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -603,7 +631,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/Wikia/Misc/Generated/R.generated.swift",
+				$SRCROOT/Wikia/Misc/Generated/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -622,14 +650,18 @@
 				F315B1F6228AF7D200D445B2 /* WikiDetailsCyclone.swift in Sources */,
 				F3BB5EB12283406D00CBD621 /* WikiOverviewCell.swift in Sources */,
 				F315B1DA2288B09100D445B2 /* Operators.swift in Sources */,
+				F3F75BBF22A147150050F1FC /* Loggable.swift in Sources */,
+				F3F75BB0229E90FB0050F1FC /* ErrorFiring.swift in Sources */,
 				F315B1D122888B6700D445B2 /* WikiaEndpoint.swift in Sources */,
 				F3BB5EAF2283402800CBD621 /* WikisListViewController.swift in Sources */,
 				F315B1FD228C452F00D445B2 /* WikiStats.swift in Sources */,
+				F3F75BBD22A0CC230050F1FC /* Retriable.swift in Sources */,
 				F315B1BF22849C6300D445B2 /* WikiOverview.swift in Sources */,
 				F315B1D6228890DE00D445B2 /* WikisPool.swift in Sources */,
 				F315B1BD2284989000D445B2 /* WikisListCyclone.swift in Sources */,
 				F315B1E52288CD9E00D445B2 /* UIScrollView+Feed.swift in Sources */,
 				F315B1CC228769D700D445B2 /* URL+ExpressibleByString.swift in Sources */,
+				F3F75BB6229E91430050F1FC /* LogErrorHandler.swift in Sources */,
 				F315B1F4228AF78600D445B2 /* WikiDetails.swift in Sources */,
 				F315B1DE2288B7FB00D445B2 /* R.generated.swift in Sources */,
 				F3BB5EB4228476D500CBD621 /* CALayer+IB.swift in Sources */,

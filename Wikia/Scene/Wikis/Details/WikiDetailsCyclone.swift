@@ -47,39 +47,3 @@ final class WikiDetailsCyclone: Cyclone {
     // Events
 
 }
-
-// TODO: Cyclone as extension of VC
-
-//extension WikiDetailsViewController: Cyclone {
-//
-//    struct State: ReducibleState {
-//        enum Event: EventType {
-//            case load(wiki: Wiki)
-//        }
-//
-//        static let initial = State(wiki: nil)
-//
-//        let wiki: Wiki?
-//
-//        var details: WikiDetails? {
-//            return wiki.flatMap(WikiDetails.init)
-//        }
-//
-//
-//        static func reduce(state: State, _ event: Event) -> State {
-//            switch event {
-//            case let .load(wiki):
-//                return .init(wiki: wiki)
-//            }
-//        }
-//    }
-//
-//    // Inputs
-//
-//    lazy var wiki = PublishSubject<Wiki>()
-//
-//    // Outputs
-//
-//    lazy var output = state(from: wiki.map(Event.load))
-//
-//}
