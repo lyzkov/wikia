@@ -9,6 +9,7 @@ The code consists of custom Rx microframeworks for some common iOS programming t
 🌪 RxCyclone -  machine state container  
 ⛲️ RxCascade - paginable feed  
 🧭 RxNavy - navigation through segues  
+🛳 RxSinkEmAll - retriable error handler
 
 Frameworks need further work in order to reach independent open source status.
 
