@@ -1,0 +1,6 @@
+framework module Pods_WikiaTests {
+  umbrella header "Pods-WikiaTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
