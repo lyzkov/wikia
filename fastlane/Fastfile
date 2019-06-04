@@ -19,6 +19,7 @@ platform :ios do
   desc "Description of what the lane does"
   before_all do
     setup_circle_ci
+    setup_travis
   end
   lane :tests do
     run_tests(scheme: "Wikia")
